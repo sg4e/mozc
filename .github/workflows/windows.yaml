@@ -41,7 +41,7 @@ jobs:
         run: |
           call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsamd64_x86.bat"
           python build_mozc.py gyp --noqt --msvs_version=2019
-          python build_mozc.py build package
+          python build_mozc.py build -c Release package
           
       - name: Publish artifacts
         uses: actions/upload-artifact@v3
